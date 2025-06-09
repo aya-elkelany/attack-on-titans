@@ -290,7 +290,7 @@ public class HardArenaController {
 		        pbStart.setLayoutY(-10 + getTitanTransitionYPosition(dist)); // Y-coordinate
 		        // Create a Timeline animation
 		        Timeline timeline = new Timeline();
-		        KeyValue keyValue = new KeyValue(pbStart.progressProperty(), prog/titan.getTitanHP());
+                        KeyValue keyValue = new KeyValue(pbStart.progressProperty(), (double) prog / titan.getTitanHP());
 		        KeyFrame keyFrame = new KeyFrame(new Duration(1000), keyValue);
 		        timeline.getKeyFrames().add(keyFrame);
 		        timeline.play();
@@ -304,7 +304,7 @@ public class HardArenaController {
 		        Label progressLabel = new Label();
 		        progressLabel.setLayoutX(getTitanImageXPosition(titan.getTitanCode()) + 55 );
 		        progressLabel.setLayoutY(-10 + getTitanTransitionYPosition(dist)); 
-		        progressLabel.setText(Double.toString(prog/titan.getTitanHP()*100) + "%");
+                        progressLabel.setText(String.format("%.0f%%", (double) prog / titan.getTitanHP() * 100));
 		        getLanePane(l).getChildren().add(progressLabel);
 		        
 		        // 2- ImageView
