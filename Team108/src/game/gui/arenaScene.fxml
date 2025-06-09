@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.gui.ArenaController">
+   <content>
+      <VBox prefHeight="787.0" prefWidth="1280.0">
+        <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: pink;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="scoreL" prefHeight="47.0" prefWidth="217.0" text="Score">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="turnL" prefHeight="47.0" prefWidth="217.0" text="Turn">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="phaseL" prefHeight="47.0" prefWidth="217.0" text="Phase">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="resourceL" prefHeight="47.0" prefWidth="217.0" text="Resources">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="laneL" prefHeight="47.0" prefWidth="217.0" text="Lanes">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+          <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="1247.0" VBox.vgrow="ALWAYS">
+            <children>
+                  <GridPane layoutX="21.0" layoutY="22.0" prefHeight="600.0" prefWidth="1200.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox fx:id="laneVBox1" prefHeight="600.0" prefWidth="400.0">
+                           <children>
+                              <VBox prefHeight="130.0">
+                                 <children>
+                                    <HBox prefHeight="60.0" prefWidth="400.0" spacing="25.0" style="-fx-background-color: LIGHTSKYBLUE; -fx-border-color: grey;">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l1w1Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="83.0" fitWidth="110.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon1.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l1w2Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon2.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l1w3Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon3.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l1w4Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon4.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label fx:id="wallHealth1" prefHeight="17.0" prefWidth="146.0" text=".">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ProgressBar fx:id="wall1PB" prefHeight="17.0" prefWidth="233.0" progress="0.2" />
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: rgb(255,128,0);" />
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="600.0" prefWidth="300.0" style="-fx-border-color: grey; -fx-border-width: 3;">
+                                 <children>
+                                    <ImageView fx:id="laneImage1" fitHeight="435.0" fitWidth="400.0" opacity="0.56" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/culane.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="lanePane1" prefHeight="0.0" prefWidth="300" style="-fx-background-color: rgb(178,255,102); -fx-border-color: grey;" />
+                              <Label fx:id="dangerLevel1" text="Danger  Level: " textFill="#d90505">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="laneVBox2" prefHeight="600.0" prefWidth="400.0" GridPane.columnIndex="1">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="400.0" spacing="25.0" style="-fx-background-color: LIGHTSKYBLUE; -fx-border-color: grey;">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l2w1Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="83.0" fitWidth="122.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon1.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l2w2Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon2.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l2w3Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon3.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l2w4Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon4.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label fx:id="wallHealth2" prefHeight="17.0" prefWidth="146.0" text=".">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ProgressBar fx:id="wall2PB" prefHeight="17.0" prefWidth="226.0" progress="0.3" />
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="50.0" prefWidth="300" style="-fx-background-color: rgb(255,128,0);" />
+                                 </children>
+                              </VBox>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="398.0" style="-fx-border-width: 3; -fx-border-color: grey;">
+                                 <children>
+                                    <ImageView fx:id="laneImage2" fitHeight="436.0" fitWidth="396.0" opacity="0.56" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/culane.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="lanePane2" prefHeight="40" prefWidth="300" style="-fx-background-color: rgb(178,102,255); -fx-border-color: grey;" />
+                              <Label fx:id="dangerLevel2" text="Danger  Level: " textFill="#d90505">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="laneVBox3" prefHeight="600.0" prefWidth="400.0" GridPane.columnIndex="2">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="117.0" prefWidth="389.0" spacing="25.0" style="-fx-background-color: LIGHTSKYBLUE; -fx-border-color: grey;">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l3w1Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="80.0" fitWidth="107.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon1.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l3w2Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon2.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l3w3Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon3.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label fx:id="l3w4Label" text="0">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/weapon4.gif" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label fx:id="wallHealth3" prefHeight="17.0" prefWidth="146.0" text=".">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ProgressBar fx:id="wall3PB" prefHeight="17.0" prefWidth="211.0" progress="0.6" />
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="50.0" prefWidth="300" style="-fx-background-color: rgb(255,128,0);" />
+                                 </children>
+                              </VBox>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="382.0" style="-fx-border-color: grey; -fx-border-width: 3;">
+                                 <children>
+                                    <ImageView fx:id="laneImage3" fitHeight="441.0" fitWidth="381.0" opacity="0.56" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/culane.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="lanePane3" prefHeight="40" prefWidth="300" style="-fx-background-color: rgb(178,255,102); -fx-border-color: grey;" />
+                              <Label fx:id="dangerLevel3" text="Danger  Level: " textFill="#d90505">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+            </children>
+          </AnchorPane>
+            <Pane fx:id="shopPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="114.0" prefWidth="1240.0" style="-fx-background-color: LIGHTSKYBLUE;">
+               <children>
+                  <Button fx:id="purchaseWeaponButton" layoutX="22.0" layoutY="10.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="196.0" text="Assign Weapon" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="430.0" layoutY="10.0" prefHeight="25.0" prefWidth="759.0" style="-fx-background-color: pink;">
+                     <children>
+                        <RadioButton fx:id="lane1" mnemonicParsing="false" selected="true" text="Lane 1">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="lane" />
+                           </toggleGroup>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" top="3.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="lane2" layoutX="129.0" mnemonicParsing="false" text="Lane 2" toggleGroup="$lane">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" top="3.0" />
+                           </padding></RadioButton>
+                        <RadioButton fx:id="lane3" layoutX="242.0" mnemonicParsing="false" text="Lane 3" toggleGroup="$lane">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" top="3.0" />
+                           </padding></RadioButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Pane>
+                  <Pane layoutX="430.0" layoutY="45.0" prefHeight="55.0" prefWidth="759.0" style="-fx-background-color: pink;">
+                     <children>
+                        <RadioButton fx:id="piercingCannon" mnemonicParsing="false" selected="true" text="PiercingCannon">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="weapon" />
+                           </toggleGroup>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="sniperCannon" layoutX="130.0" mnemonicParsing="false" text="SniperCannon" toggleGroup="$weapon">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></RadioButton>
+                        <RadioButton fx:id="volleySpreadCannon" layoutX="272.0" mnemonicParsing="false" text="VolleySpreadCannon" toggleGroup="$weapon">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></RadioButton>
+                        <RadioButton fx:id="wallTrap" layoutX="441.0" mnemonicParsing="false" text="WallTrap" toggleGroup="$weapon">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <Pane layoutX="26.0" layoutY="17.0">
+                           <children>
+                              <Label text="Price" />
+                              <Label layoutX="51.0" text="Damage" />
+                              <Label layoutX="6.0" layoutY="11.0" text="25$">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="67.0" layoutY="11.0" text="10">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="158.0" layoutY="17.0">
+                           <children>
+                              <Label text="Price" />
+                              <Label layoutX="51.0" text="Damage" />
+                              <Label layoutX="6.0" layoutY="11.0" text="25$">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="67.0" layoutY="11.0" text="35">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="298.0" layoutY="17.0">
+                           <children>
+                              <Label text="Price" />
+                              <Label layoutX="51.0" text="Damage" />
+                              <Label layoutX="6.0" layoutY="11.0" text="100$">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="67.0" layoutY="11.0" text="5">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="441.0" layoutY="17.0">
+                           <children>
+                              <Label layoutX="26.0" text="Price" />
+                              <Label layoutX="77.0" text="Damage" />
+                              <Label layoutX="32.0" layoutY="11.0" text="75$">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="11.0" text="100">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </Pane>
+                  <Button fx:id="passTurnButton" layoutX="225.0" layoutY="11.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="177.0" text="Skip Purchase" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Pane>
+        </children>
+      </VBox>
+   </content>
+</ScrollPane>
